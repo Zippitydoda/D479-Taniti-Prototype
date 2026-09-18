@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Visit Taniti</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="index.html">Taniti</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dining.html">Dining</a></li>
+                <li><a href="lodging.html">Lodging</a></li>
+                <li><a href="entertainment.html">Entertainment</a></li>
+                <li><a href="transportation.html">Transportation</a></li>
+                <li><a href="faq.html" class="active">FAQ</a></li>
+            </ul>
+            <a href="#" id="bookBtn" class="btn btn-primary" style="margin-left: 20px;">Book Your Trip</a>
+        </nav>
+    </header>
+
+    <div class="page-header" style="background-image: url('images/coralreef.jpg');">
+        <div class="page-header-content">
+            <h1>Frequently Asked Questions</h1>
+            <p>Everything you need to know before you go.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="faq-list">
+            <h2 style="color: #005f73; margin-bottom: 15px;">Money & Utilities</h2>
+            <div class="faq-item">
+                <h3>What currency is used on the island?</h3>
+                <p>Taniti uses the U.S. dollar as its currency, but many businesses will also accept euros and yen.
+                    Several banks facilitate currency exchange, and many businesses accept major credit cards.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What are the power outlet specifications?</h3>
+                <p>Power outlets are 120 volts (the same as in the United States).</p>
+            </div>
+
+            <h2 style="color: #005f73; margin-top: 30px; margin-bottom: 15px;">Culture & Safety</h2>
+            <div class="faq-item">
+                <h3>Is English spoken in Taniti?</h3>
+                <p>Many younger Tanitians speak fluent English. Very little English is spoken in rural areas, especially
+                    by the older residents.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What are the alcohol and drinking laws?</h3>
+                <p>Alcohol is not allowed to be served or sold between the hours of midnight and 9:00 a.m. The drinking
+                    age on Taniti is 18 and the drinking age is not strictly enforced.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Is the island safe for tourists?</h3>
+                <p>Violent crime is very rare on Taniti, but as tourism increases, there are more reports of
+                    pickpocketing and other petty crimes.</p>
+            </div>
+
+            <h2 style="color: #005f73; margin-top: 30px; margin-bottom: 15px;">Services & Holidays</h2>
+            <div class="faq-item">
+                <h3>What healthcare facilities are available?</h3>
+                <p>There is one hospital and several clinics. The hospital has many multilingual employees.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Will places be open during holidays?</h3>
+                <p>Taniti enjoys a large number of national holidays, and many tourist attractions and restaurants will
+                    be closed on holidays, so visitors should plan accordingly.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Taniti Tourism Board. All rights reserved.</p>
+        </div>
+    </footer>
+    <div id="bookingAlert" class="custom-alert hidden">
+        Congratulations your booked!
+    </div>
+</body>
+
+</html>
+<script>
+    document.getElementById('bookBtn').addEventListener('click', function (e) {
+        e.preventDefault(); // Prevents the page from jumping to the top
+        const alertBox = document.getElementById('bookingAlert');
+
+        // Show the alert
+        alertBox.classList.remove('hidden');
+
+        // Hide it after 3 seconds (3000 milliseconds)
+        setTimeout(function () {
+            alertBox.classList.add('hidden');
+        }, 2000);
+    });
+</script>

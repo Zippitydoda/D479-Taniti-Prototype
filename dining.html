@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dining - Visit Taniti</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="index.html">Taniti</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dining.html" class="active">Dining</a></li>
+                <li><a href="lodging.html">Lodging</a></li>
+                <li><a href="entertainment.html">Entertainment</a></li>
+                <li><a href="transportation.html">Transportation</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+            <a href="#" id="bookBtn" class="btn btn-primary" style="margin-left: 20px;">Book Your Trip</a>
+        </nav>
+    </header>
+
+    <div class="page-header" style="background-image: url('images/dining.jpg');">
+        <div class="page-header-content">
+            <h1>Dining & Groceries</h1>
+            <p>Taste the flavors of the island.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content-grid">
+            <div class="text-col">
+                <h2>Local Restaurants</h2>
+                <p>Taniti currently has 10 restaurants offering a variety of cuisines to satisfy any palate:</p>
+
+                <div class="quick-stats" style="margin-top: 20px; margin-bottom: 20px;">
+                    <div class="stat-box">
+                        <h3>5</h3>
+                        <p>Local Fare</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>3</h3>
+                        <p>American Style</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>2</h3>
+                        <p>Pan-Asian</p>
+                    </div>
+                </div>
+                <h2 style="margin-top: 30px;">Groceries & Supplies</h2>
+                <p>If you prefer to cook or need quick snacks, the island has several convenient options:</p>
+                <ul>
+                    <li>Two supermarkets.</li>
+                    <li>Two smaller grocery stores.</li>
+                    <li>One convenience store that is open 24 hours a day.</li>
+                </ul>
+            </div>
+            <div class="image-col">
+                <img src="images\restaurant.jpg" alt="Restaurant dining">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Taniti Tourism Board. All rights reserved.</p>
+        </div>
+    </footer>
+    <div id="bookingAlert" class="custom-alert hidden">
+        Congratulations your booked!
+    </div>
+</body>
+
+</html>
+<script>
+    document.getElementById('bookBtn').addEventListener('click', function (e) {
+        e.preventDefault(); // Prevents the page from jumping to the top
+        const alertBox = document.getElementById('bookingAlert');
+
+        // Show the alert
+        alertBox.classList.remove('hidden');
+
+        // Hide it after 3 seconds (3000 milliseconds)
+        setTimeout(function () {
+            alertBox.classList.add('hidden');
+        }, 2000);
+    });
+</script>

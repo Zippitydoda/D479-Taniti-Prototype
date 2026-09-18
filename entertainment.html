@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entertainment - Visit Taniti</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="index.html">Taniti</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dining.html">Dining</a></li>
+                <li><a href="lodging.html">Lodging</a></li>
+                <li><a href="entertainment.html" class="active">Entertainment</a></li>
+                <li><a href="transportation.html">Transportation</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+            <a href="#" id="bookBtn" class="btn btn-primary" style="margin-left: 20px;">Book Your Trip</a>
+        </nav>
+    </header>
+
+    <div class="page-header" style="background-image: url('images/scuba.jpg');">
+        <div class="page-header-content">
+            <h1>Sightseeing & Entertainment</h1>
+            <p>Adventure awaits at every corner.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content-grid">
+            <div class="text-col">
+                <h2>Top Sightseeing</h2>
+                <p>Most people visit Taniti to enjoy the beaches, explore the rainforest, and to visit the volcano.
+                    Other popular activities include boat or bus tours of the island.</p>
+
+                <h2 style="margin-top: 30px;">Activities & Nightlife</h2>
+                <p>There are plenty of other things to do during your stay:</p>
+                <ul>
+                    <li>Visiting a local history museum.</li>
+                    <li>Going on chartered fishing tours or snorkeling.</li>
+                    <li>Zip-lining in the rainforest.</li>
+                    <li>Taking helicopter rides.</li>
+                    <li>Playing at an arcade, visiting art galleries, and bowling.</li>
+                    <li>Visiting several pubs, including a microbrewery.</li>
+                    <li>Dancing at a new dance club or seeing a movie.</li>
+                </ul>
+                <h2 style="margin-top: 30px; color: #e76f51;">Coming Soon</h2>
+                <p>A new <strong>nine-hole golf course</strong> is currently under development and should be operational
+                    by next year! <em>(Note: Many of the island's activities, including this upcoming course, are
+                        located in Merriton Landing.)</em></p>
+            </div>
+            <div class="image-col">
+                <img src="images\snorkle.jpg" alt="Snorkeling">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Taniti Tourism Board. All rights reserved.</p>
+        </div>
+
+    </footer>
+    <div id="bookingAlert" class="custom-alert hidden">
+        Congratulations your booked!
+    </div>
+</body>
+
+</html>
+<script>
+    document.getElementById('bookBtn').addEventListener('click', function (e) {
+        e.preventDefault(); // Prevents the page from jumping to the top
+        const alertBox = document.getElementById('bookingAlert');
+
+        // Show the alert
+        alertBox.classList.remove('hidden');
+
+        // Hide it after 3 seconds (3000 milliseconds)
+        setTimeout(function () {
+            alertBox.classList.add('hidden');
+        }, 2000);
+    });
+</script>

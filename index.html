@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Taniti - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="index.html">Taniti</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="dining.html">Dining</a></li>
+                <li><a href="lodging.html">Lodging</a></li>
+                <li><a href="entertainment.html">Entertainment</a></li>
+                <li><a href="transportation.html">Transportation</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+            <a href="#" id="bookBtn" class="btn btn-primary" style="margin-left: 20px;">Book Your Trip</a>
+        </nav>
+    </header>
+
+    <div class="page-header hero-home">
+        <div class="page-header-content">
+            <h1>Welcome to Taniti</h1>
+            <p>Your Tropical Pacific Getaway</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="quick-stats">
+            <div class="stat-box">
+                <h3>~20,000</h3>
+                <p>Population</p>
+            </div>
+            <div class="stat-box">
+                <h3>&lt; 500 sq mi</h3>
+                <p>Area</p>
+            </div>
+            <div class="stat-box">
+                <h3>10</h3>
+                <p>Restaurants</p>
+            </div>
+            <div class="stat-box">
+                <h3>USD / EUR / JPY</h3>
+                <p>Accepted Currency</p>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <div class="text-col">
+                <h2>About the Island</h2>
+                <p>Taniti is a small, tropical island in the Pacific. While the island has an area of less than 500 square miles, the terrain is varied and includes both sandy and rocky beaches, a small but safe harbor, lush tropical rainforests, and a mountainous interior that includes a small, active volcano.</p>
+                <p>Taniti has an indigenous population of about 20,000. Until a recent increase in tourism, most the Tanitian economy was dominated by fishing or agriculture. Most tourists spend most of their time in Taniti City, which boasts native architecture and nearby white, sandy beaches that encircle Yellow Leaf Bay.</p>
+            </div>
+            <div class="image-col">
+                <img src="images/tanitibeach.jpg" alt="Taniti Beach">
+            </div>
+        </div>
+
+        <div class="card-grid">
+            <div class="card">
+                <img src="images\beach.jpg" alt="Beaches">
+                <div class="card-content">
+                    <h3>Beautiful Beaches</h3>
+                    <p>Enjoy our beautiful sandy and rocky beaches, perfect for relaxation.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images\rainforest.JPG" alt="Rainforest">
+                <div class="card-content">
+                    <h3>Lush Rainforests</h3>
+                    <p>Hike through our lush tropical rainforests and discover local wildlife.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images\volcano.jpg" alt="Volcano">
+                <div class="card-content">
+                    <h3>Active Volcano</h3>
+                    <p>Explore the mountainous interior that includes a small, active volcano.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo">Taniti</div>
+                <p>Experience the beauty of the Pacific.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="dining.html">Dining</a></li>
+                    <li><a href="lodging.html">Lodging</a></li>
+                    <li><a href="entertainment.html">Entertainment</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Plan Your Trip</h4>
+                <ul>
+                    <li><a href="transportation.html">Transportation</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Taniti Tourism Board. All rights reserved.</p>
+        </div>
+    </footer>
+    <div id="bookingAlert" class="custom-alert hidden">
+    Congratulations your booked!
+</div>
+</body>
+</html>
+<script>
+    document.getElementById('bookBtn').addEventListener('click', function(e) {
+        e.preventDefault(); // Prevents the page from jumping to the top
+        const alertBox = document.getElementById('bookingAlert');
+        
+        // Show the alert
+        alertBox.classList.remove('hidden');
+        
+        // Hide it after 3 seconds (3000 milliseconds)
+        setTimeout(function() {
+            alertBox.classList.add('hidden');
+        }, 2000);
+    });
+</script>

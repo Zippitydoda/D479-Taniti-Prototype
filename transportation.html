@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transportation - Visit Taniti</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="index.html">Taniti</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dining.html">Dining</a></li>
+                <li><a href="lodging.html">Lodging</a></li>
+                <li><a href="entertainment.html">Entertainment</a></li>
+                <li><a href="transportation.html" class="active">Transportation</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+            <a href="#" id="bookBtn" class="btn btn-primary" style="margin-left: 20px;">Book Your Trip</a>
+        </nav>
+    </header>
+
+    <div class="page-header" style="background-image: url('images/plane.jpg');">
+        <div class="page-header-content">
+            <h1>Getting Here & Around</h1>
+            <p>Navigating our tropical island.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content-grid">
+            <div class="text-col">
+                <h2>Arriving in Taniti</h2>
+                <p>Almost all visitors arrive to Taniti by air, though some arrive on a small cruise ship that docks in
+                    Yellow Leaf Bay for one night per week. Taniti is served by a small airport that can accommodate
+                    small jets and propeller planes. Taniti is in the process of expanding the airport so larger jets
+                    will be able to land on the island within the next few years.</p>
+
+                <h2 style="margin-top: 30px;">Ground Transportation</h2>
+                <p>Getting around the island is easy with these options:</p>
+
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Transport Mode</th>
+                            <th>Service Area</th>
+                            <th>Hours / Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Public Buses</strong></td>
+                            <td>Taniti City</td>
+                            <td>5:00 a.m. to 11:00 p.m. every day</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Private Buses</strong></td>
+                            <td>Rest of the island</td>
+                            <td>Schedules vary</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Taxis & Rentals</strong></td>
+                            <td>Taniti City / Airport</td>
+                            <td>Rental cars available near the airport</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Bicycles</strong></td>
+                            <td>Island-wide</td>
+                            <td>Available from several vendors (helmets required by law)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p style="margin-top: 15px;">Taniti City is fairly flat and very walkable. The popular Merriton Landing
+                    area is also easy to explore on foot.</p>
+            </div>
+            <div class="image-col">
+                <img src="images/bus.jpg" alt="Island Bus">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Taniti Tourism Board. All rights reserved.</p>
+        </div>
+    </footer>
+    <div id="bookingAlert" class="custom-alert hidden">
+        Congratulations your booked!
+    </div>
+</body>
+
+</html>
+<script>
+    document.getElementById('bookBtn').addEventListener('click', function (e) {
+        e.preventDefault(); // Prevents the page from jumping to the top
+        const alertBox = document.getElementById('bookingAlert');
+
+        // Show the alert
+        alertBox.classList.remove('hidden');
+
+        // Hide it after 3 seconds (3000 milliseconds)
+        setTimeout(function () {
+            alertBox.classList.add('hidden');
+        }, 2000);
+    });
+</script>

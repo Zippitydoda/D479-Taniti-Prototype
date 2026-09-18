@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lodging - Visit Taniti</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="index.html">Taniti</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dining.html">Dining</a></li>
+                <li><a href="lodging.html" class="active">Lodging</a></li>
+                <li><a href="entertainment.html">Entertainment</a></li>
+                <li><a href="transportation.html">Transportation</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+            <a href="#" id="bookBtn" class="btn btn-primary" style="margin-left: 20px;">Book Your Trip</a>
+        </nav>
+    </header>
+
+    <div class="page-header" style="background-image: url('images/lodging.jpg');">
+        <div class="page-header-content">
+            <h1>Places to Stay</h1>
+            <p>Rest and relax in paradise.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content-grid">
+            <div class="text-col">
+                <h2>Accommodation Options</h2>
+                <p>Taniti has a wide variety of lodging that ranges from an inexpensive hostel to one large, four-star
+                    resort.</p>
+                <p>For visitors looking for a more personal touch, there are many small, family-owned hotels and a
+                    growing number of bed and breakfasts scattered around the island.</p>
+
+                <div
+                    style="background: #fff; border-left: 5px solid #e76f51; padding: 15px 20px; margin: 20px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                    <h3 style="color: #005f73; margin-bottom: 5px;">Popular Area: Merriton Landing</h3>
+                    <p style="margin-bottom: 0;">Many tourists choose to stay in the area surrounding Merriton Landing,
+                        which is a rapidly developing area on the north side of Yellow Leaf Bay.</p>
+                </div>
+
+                <h2 style="margin-top: 30px;">Quality & Safety</h2>
+                <p>Guests can rest easy knowing that all types of lodging are strictly regulated and regularly inspected
+                    by the Tanitian government.</p>
+            </div>
+            <div class="image-col">
+                <img src="images/lodging homes.jpg" alt="Resort pool">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Taniti Tourism Board. All rights reserved.</p>
+        </div>
+    </footer>
+    <div id="bookingAlert" class="custom-alert hidden">
+        Congratulations your booked!
+    </div>
+</body>
+
+</html>
+<script>
+    document.getElementById('bookBtn').addEventListener('click', function (e) {
+        e.preventDefault(); // Prevents the page from jumping to the top
+        const alertBox = document.getElementById('bookingAlert');
+
+        // Show the alert
+        alertBox.classList.remove('hidden');
+
+        // Hide it after 3 seconds (3000 milliseconds)
+        setTimeout(function () {
+            alertBox.classList.add('hidden');
+        }, 2000);
+    });
+</script>
